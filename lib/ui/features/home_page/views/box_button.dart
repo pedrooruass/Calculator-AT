@@ -27,7 +27,7 @@ class BoxButton extends StatelessWidget {
         flex: flex,
         child: GestureDetector(
           onTap: () {
-            print('$character tapped');
+            // print('$character tapped');
             SystemSound.play(SystemSoundType.click);
             if (character.toLowerCase() == 'c') {
               calculationProvider.clear();
