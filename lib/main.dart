@@ -1,7 +1,6 @@
 import 'package:calculator_pj/application/providers/calculation_provider.dart';
 import 'package:calculator_pj/application/providers/decoration_provider.dart';
 import 'package:calculator_pj/ui/features/home_page/home_page.dart';
-import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -11,12 +10,12 @@ main() {
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
       .then((_) {
     runApp(
-      DevicePreview(
-        builder: (context) {
-          return const MyApp();
-        },
-      ),
-    );
+        // DevicePreview(
+        // builder: (context) {
+        const MyApp()
+        // },
+        // ),
+        );
   });
 }
 
@@ -44,8 +43,8 @@ class MyApp extends StatelessWidget {
             ),
             debugShowCheckedModeBanner: false,
             // themeMode: decorationProvider.currentTheme(),
-            builder: DevicePreview.appBuilder,
-            locale: DevicePreview.locale(context),
+            // builder: DevicePreview.appBuilder,
+            // locale: DevicePreview.locale(context),
             home: const HomePage(),
           );
         },

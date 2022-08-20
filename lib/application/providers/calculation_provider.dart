@@ -11,6 +11,9 @@ class CalculationProvider extends ChangeNotifier {
     if (showNumber == "0") {
       showNumber = "";
     }
+    if (showNumber == '-') {
+      showNumber = '-0';
+    }
     if (showNumber == '.') {
       showNumber = '0.';
     }
@@ -19,6 +22,9 @@ class CalculationProvider extends ChangeNotifier {
   }
 
   addSign() {
+    if (showNumber == "0") {
+      showNumber = "";
+    }
     if (showNumber.contains('-')) {
       showNumber = showNumber.replaceAll('-', '');
     } else {
